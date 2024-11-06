@@ -1,16 +1,21 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+todos=[]
+while True:
+    user_action = input("What do you want to do? ")
+    user_action.strip()
+    match user_action:
+        case "add":
+            todo = input("What do you want to add? ")
+            todos.append(todo)
+        case "show":
+            for i, todo in enumerate(todos):
+                print(f"{i+1}. {todo}")
+        case "edit":
+            index = int(input("Which item do you want to edit? "))
+            new_todo = input("What do you want to replace it with? ")
+            todos[index-1] = new_todo
+        case "exit":
+            print("Goodbye!")
+            break
+        case _:
+            print("Invalid action")
+    

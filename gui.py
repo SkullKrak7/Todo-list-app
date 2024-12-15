@@ -4,13 +4,13 @@ import functions
 layout=[
     [sg.Text("Enter your to-do in the box")],
     [sg.InputText(tooltip="Enter To-do", key="todo"),sg.Button("Add")],
-    [sg.Listbox(values=functions.get_todos(), key = 'todos', enable_events=True, size=[45,10]), sg.Button("Edit"), sg.Button("Complete")]
+    [sg.Listbox(values=functions.get_todos(), key = 'todos', enable_events=True, size=[45,10]), sg.Button("Edit"), sg.Button("Complete"),
+    [sg.Button("Exit")]]
 ]
 window=sg.Window("My to-do list", layout, font=("Helvetica", 20))
 while True:
     event, values = window.read()
     match event:
-        
         case "Add":
             todos=functions.get_todos()
             todos.append(values['todo'])
@@ -31,10 +31,14 @@ while True:
             window['todo'].update(value=values['todos'][0])
         case 'Complete':
             todo_remove = values['todos'][0]
+
             todos=functions.get_todos()
             todos.remove(todo_remove)
             functions.write_todos(todos)
+
             windows['todos'].update(values=todos)
+        case 'Exit':
+            break
         case sg.WIN_CLOSED:
             break        
 

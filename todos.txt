@@ -1,5 +1,8 @@
-show
-add
-edit
-complete
-enter
+Clean the room
+Fix the phone
+Throw the garbage
+Eat breakfast
+Do coding
+Calculate Budget
+Annotate Important points
+Howdy fellas

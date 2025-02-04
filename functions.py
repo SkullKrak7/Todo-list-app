@@ -1,6 +1,4 @@
 FILEPATH = "todos.txt"
-
-
 def get_todos(filepath=FILEPATH):
     """
     This is a function used to open the file from default filepath and read the file, save it to a variable and close it

@@ -3,7 +3,7 @@ import functions
 
 
 def add_todo():
-    """Adds a new todo item from user input."""
+    """Adds a new to-do item from user input."""
     todo = st.session_state["new_todo"].strip()  # Trim spaces
     if todo:  # Prevent empty todos
         todos.append(todo)

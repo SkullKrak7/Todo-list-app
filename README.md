@@ -1,4 +1,21 @@
-# Todo-list-app
-Created a command line interface first using match - case. Then updated the code to use functions for reading and writing in the text file and using if-elif-else blocks to manage the logic.
-Created a graphical user interface using match - case and PySimpleGUI library.
-Created a web app using streamlit library.
+# ✅ Todo List CLI App – Practice Project
+
+Built following the "Python Mega Course" (Udemy) to practice creating a basic command-line todo list manager.
+
+---
+
+## 🚀 Features
+- Add, edit, complete, and delete todo tasks
+- View current tasks
+- Save tasks persistently using text files
+
+---
+
+## 🔧 Technologies Used
+- Python
+- File I/O (text file handling)
+
+---
+
+## 📚 Note
+This is a **practice project** built by following course material.
